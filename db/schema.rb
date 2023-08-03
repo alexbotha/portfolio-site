@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_03_145206) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_03_152304) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_03_145206) do
     t.text "description"
     t.string "dsa_image"
     t.string "difficulty"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "project_technologies", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "technology_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,7 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_03_145206) do
 
   create_table "technologies", force: :cascade do |t|
     t.string "name"
-    t.integer "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
