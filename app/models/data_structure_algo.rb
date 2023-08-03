@@ -1,0 +1,2 @@
+class DataStructureAlgo < ApplicationRecord
+end
