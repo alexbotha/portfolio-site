@@ -1,2 +1,0 @@
-class ProjectTechnology < ApplicationRecord
-end

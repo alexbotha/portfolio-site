@@ -1,3 +1,4 @@
 class Technology < ApplicationRecord
-  belongs_to :projects  
+  has_many :recreate_project_technologies
+  has_many :projects, through: :recreate_project_technologies
 end
