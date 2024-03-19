@@ -3,14 +3,25 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(27, 25, 25);
+  background-color: rgb(15, 25, 34);
   color: white;
 }
 
 .nav-styles {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Trebuchet MS", "Azeret Mono", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif, monospace;
   margin-left: auto;
 }
 
- 
+.hover-popup {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.text-label {
+  font-family: "Azeret Mono", monospace;
+}
+
+.box-effect {
+  box-shadow: 0.6vw 0 0 0 rgb(37, 99, 235), 1.4vw 0 0 0 #3e0f97, 2.2vw 0 0 0 #273038;
+}
