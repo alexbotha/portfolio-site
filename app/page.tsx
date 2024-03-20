@@ -7,6 +7,7 @@ import {
   IconDownload,
   IconMenu2,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function Home() {
   const [openResume, setOpenResume] = useState(false);
@@ -22,17 +23,19 @@ export default function Home() {
       </div>
 
       <div className="text-[25px]">
-        <h1>Hi! I'm Alex.</h1>
+        <h1>
+          Hi! I'm <span className="text-blue-600">Alex</span>.
+        </h1>
         <div className="text-auto">
           <p>
-            A Full-Stack Developer passionate about creating software solutions
-            to help businesses
+            A <span className="text-blue-600">Full-Stack Developer </span>
+            passionate about creating software solutions to help businesses
           </p>
         </div>
         <div className="gap-2 py-2 items-center text-base">
           <button
             onClick={() => setOpenResume(!openResume)}
-            className="flex bg-white text-black hover:bg-blue-600 hover:text-white  rounded-[40px] gap-2 p-4 font-bold transition-colors duration-300"
+            className="flex bg-white text-black hover:bg-blue-600 hover:text-white rounded-[40px] gap-2 p-4 font-bold transition-colors duration-300"
           >
             Resume
             <IconMenu2 />
@@ -40,11 +43,16 @@ export default function Home() {
           <div
             className={`${openResume ? "cursor-pointer" : "invisible"} pt-2`}
           >
-            <div className="flex gap-2 hover:underline ">
-              <IconArrowNarrowRight /> Open
-            </div>
-            <div className="flex gap-2 hover:underline">
-              <IconDownload /> Download
+            <Link href="/resume">
+              <div className="flex gap-2 hover:text-blue-600 ">
+                <IconArrowNarrowRight /> Open
+              </div>
+            </Link>
+            <div className="flex gap-2 hover:text-blue-600">
+              <IconDownload />
+              <a href="/alex_botha_cv(1).pdf" download="alex_botha_cv.pdf">
+                Download
+              </a>
             </div>
           </div>
         </div>
