@@ -41,10 +41,10 @@ export default function Home() {
             <IconMenu2 />
           </button>
           <div
-            className={`${openResume ? "cursor-pointer" : "invisible"} pt-2`}
+            className={`${openResume ? "cursor-pointer" : "invisible"} py-2`}
           >
             <Link href="/resume">
-              <div className="flex gap-2 hover:text-blue-600 ">
+              <div className="flex gap-2 py-1 hover:text-blue-600 ">
                 <IconArrowNarrowRight /> Open
               </div>
             </Link>
